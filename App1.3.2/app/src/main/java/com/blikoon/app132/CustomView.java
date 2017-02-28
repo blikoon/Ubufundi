@@ -100,5 +100,3 @@ public class CustomView extends View {
                 mPaint);
     }
 }
-
-
