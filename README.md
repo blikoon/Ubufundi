@@ -43,7 +43,7 @@ Source code for Android Recipies Book 5Th Edition
 ##App1.3.2 : Creting Completely custom Views
 				
 * Key overides:
-```			
+```java			
 	@Override
     protected void onMeasure(int widthMeasureSpec,
                              int heightMeasureSpec) {
@@ -81,7 +81,7 @@ Source code for Android Recipies Book 5Th Edition
 * Call View.animate() and get a ViewPropertyAnimator object
 * On it, you can call functions to animate properties like alpha ,translation, rotation...
 * Quick code :
-```
+```java
 	public void onClick(View v) {
         if (viewToAnimate.getAlpha() > 0f) {
             //If the view is visible, slide it out to the right
@@ -104,7 +104,7 @@ Source code for Android Recipies Book 5Th Edition
 * This example gives a basic template you can use as a starting point for more complex animations.
 * More in depth details here : https://developer.android.com/guide/topics/graphics/prop-animation.html#property-vs-view
 * Quick Code:
-```
+```java
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,7 +146,7 @@ Source code for Android Recipies Book 5Th Edition
          //The animations are probably stored in some kind of container and you
          //retrieve them in the order they are stored in inside the flip.xml
          //animation file.
-```		 
+```java		 
          ObjectAnimator flipAnimator = (ObjectAnimator) mFlipper.getChildAnimations().get(0);
          flipAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {...}
 ```
@@ -179,7 +179,7 @@ Source code for Android Recipies Book 5Th Edition
 * In this example APPEARING, DISAPPEARING and CHANGE_DISAPPEARING are used.
 
 * How to use these:
-```
+```java
           #Create a LayoutTransition and attach it to a view(Layout)
                 LayoutTransition transition = new LayoutTransition();
                 mContainer.setLayoutTransition(transition);
