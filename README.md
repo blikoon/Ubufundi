@@ -211,18 +211,18 @@ Source code for Android Recipies Book 5Th Edition
 * Use [smallestWidth] sw<N>dp (Examples:sw600dp,sw720dp) ,[Available screen width ]	w<N>dp (Examples: w720dp ,w1024dp) , and [Available screen height] 	h<N>dp (Examples: h720dp h1024dp) to target a specific screen size.
 * This example uses a combination of the following layout files and aliases to make our app work on regular phones ,7 inch tablets and 10 inch tablets :res/layout/main.xml, res/layout-land/main.xml,res/layout/main_tablet.xml,res/values-large-land/layout.xml, res/values-sw600dp-land/layout.xml, res/values-xlarge/layout.xml, res/values-sw720dp/layout.xml
 * Relevant files :
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/java/com/blikoon/app16/MainActivity.java
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/layout/activity_main.xml
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/layout/main.xml
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/layout/main_tablet.xml
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-large-land/layout.xml
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-sw600dp-land/layout.xml
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-sw720dp/layout.xml
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-w820dp/dimens.xml
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-xlarge/layout.xml
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/java/com/blikoon/app16/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/layout/activity_main.xml
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/layout/main.xml
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/layout/main_tablet.xml
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-large-land/layout.xml
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-sw600dp-land/layout.xml
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-sw720dp/layout.xml
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-w820dp/dimens.xml
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-xlarge/layout.xml
 				
 ####App1.7 : Show text over images in appropriate colors.
 
 * android.graphics.Bitmap and android.support.v7.graphics.Palette classes are used.
 * Relevant files :
-..* https://github.com/blikoon/Ubufundi/blob/master/App1.7/app/src/main/java/com/blikoon/app17/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.7/app/src/main/java/com/blikoon/app17/MainActivity.java
