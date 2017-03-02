@@ -25,7 +25,7 @@ Source code for Android Recipies Book 5Th Edition
 ##App1.3.1 : Create Layouts in XML and add Views at run time(in Java)
 
 * Quick Code:
-```
+```java
 	LinearLayout layout = (LinearLayout)getLayoutInflater()
            .inflate(R.layout.activity_main, null);
     //Add a new button.Here you can also add complex ui structures
