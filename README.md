@@ -9,7 +9,8 @@ Source code for Android Recipies Book 5Th Edition
 * Themes are used either on Activity context or Application context.
 
 * Direct link to app : https://github.com/blikoon/Ubufundi/tree/master/App1.1
-* Relevant files :https://github.com/blikoon/Ubufundi/blob/master/App1.1/app/src/main/res/layout/activity_main.xml
+* Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.1/app/src/main/res/layout/activity_main.xml
 				
 
 ####App1.2 : Show your activity fullscreen when necessary
@@ -18,11 +19,12 @@ Source code for Android Recipies Book 5Th Edition
 * This app shows off different approaches to that.
 
 * Direct link to app :https://github.com/blikoon/Ubufundi/tree/master/App1.2
-* Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.2/app/src/main/java/com/blikoon/app12/MainActivity.java
+* Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.2/app/src/main/java/com/blikoon/app12/MainActivity.java
 
 ####App1.3.1 : Create Layouts in XML and add Views at run time(in Java)
 
-* A code snippet is better than a thousand words.Here we are.
+* Quick Code:
 ```
 	LinearLayout layout = (LinearLayout)getLayoutInflater()
            .inflate(R.layout.activity_main, null);
@@ -34,8 +36,9 @@ Source code for Android Recipies Book 5Th Edition
                         ActionBar.LayoutParams.WRAP_CONTENT));
 ```
 						
-*Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/java/com/blikoon/app131/MainActivity.java
-				: https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/res/layout/activity_main.xml
+*Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/java/com/blikoon/app131/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/res/layout/activity_main.xml
 				
 ####App1.3.2 : Creting Completely custom Views
 				
@@ -65,9 +68,10 @@ Source code for Android Recipies Book 5Th Edition
     }
 ```
 	
-* Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/MainActivity.java
-				: https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/CustomView.java
-			    : https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/res/layout/activity_main.xml
+* Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/CustomView.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/res/layout/activity_main.xml
 				
 				
 				
@@ -91,7 +95,8 @@ Source code for Android Recipies Book 5Th Edition
         }
     }
 ```	
-*Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.4.1/app/src/main/java/com/blikoon/app141/MainActivity.java
+*Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.4.1/app/src/main/java/com/blikoon/app141/MainActivity.java
 
 ####App1.4.2 : Use ObjectAnimator to animate a View
 
@@ -128,7 +133,8 @@ Source code for Android Recipies Book 5Th Edition
         });
     }
 ```	
-* Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.4.2/app/src/main/java/com/blikoon/app142/MainActivity.java
+* Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.4.2/app/src/main/java/com/blikoon/app142/MainActivity.java
 
 ####App1.4.3 : Use AnimatorSet to chain animations
 
@@ -145,15 +151,17 @@ Source code for Android Recipies Book 5Th Edition
          flipAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {...}
 ```
 		 
-*Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/java/com/blikoon/App143/MainActivity.java
-				: https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/res/animator/flip.xml
+*Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/java/com/blikoon/App143/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/res/animator/flip.xml
 				
 				
 ####App1.5.1 : Animate Layout Changes
 				
 * Adding the property android:animateLayoutChanges="true" to y our layout view makes its layout changes animated.
 * This is enough if you don't want fancy animations.If you do, look at App 1.5.2
-*Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.5.1/app/src/main/res/layout/activity_main.xml
+*Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.5.1/app/src/main/res/layout/activity_main.xml
 
 ####App1.5.2 : Custom Layout Animations
 
@@ -162,18 +170,13 @@ Source code for Android Recipies Book 5Th Edition
 * Use these to apply custom animations to layout changes
 * There are five states of layout changes for which you can
 *apply a custom animation on different states:
-        #APPEARING: An item that is appearing in the container
+  * APPEARING: An item that is appearing in the container
+  * DISAPPEARING: An item that is disappearing from the container
+  * CHANGING: An item that is changing because of a layout change, such as a resize, that doesn’t involve views being added or removed
+  * CHANGE_APPEARING: An item changing because of another view appearing
+  * CHANGE_DISAPPEARING: An item changing because of another view disappearing
 
-        #DISAPPEARING: An item that is disappearing from the container
-
-        #CHANGING: An item that is changing because of a layout change, such as a resize, that
-            doesn’t involve views being added or removed
-
-        #CHANGE_APPEARING: An item changing because of another view appearing
-
-        #CHANGE_DISAPPEARING: An item changing because of another view disappearing
-
-        In this example APPEARING, DISAPPEARING and CHANGE_DISAPPEARING are used.
+* In this example APPEARING, DISAPPEARING and CHANGE_DISAPPEARING are used.
 
 * How to use these:
 ```
@@ -188,7 +191,8 @@ Source code for Android Recipies Book 5Th Edition
                 transition.getDuration(LayoutTransition.APPEARING));
                 transition.setAnimator(LayoutTransition.APPEARING, appearAnim);
 ```				
-* Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.5.2/app/src/main/java/com/blikoon/app152/MainActivity.java
+* Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.5.2/app/src/main/java/com/blikoon/app152/MainActivity.java
 
 
 ####App1.6 : Target multiple screen sizes with your app
@@ -196,20 +200,46 @@ Source code for Android Recipies Book 5Th Edition
 
 * Detailed info from google : https://developer.android.com/guide/practices/screens_support.html
 * Screen size : actual physical size, measured as the screen's diagonal.
-* Screen Size Categories : small, normal, large, xlarge
+* Screen Size Categories :
+  * small
+  * normal
+  * large
+  * xlarge
 
 * Screen density - dots per inch (dpi) :quantity of pixels within a physical area of the screen
-* Screen Density Categories : low, medium, high, extra-high, extra-extra-high, and extra-extra-extra-high.
+* Screen Density Categories :
+  * low
+  * medium
+  * high
+  * extra-high
+  * extra-extra-high
+  * extra-extra-extra-high.
 * Screen density info is usually found on each android device user manual of some kind of documentation.
-* A set of six generalized densities: ldpi (low) ~120dpi,mdpi (medium) ~160dpi,hdpi (high) ~240dpi,xhdpi (extra-high) ~320dpi,xxhdpi (extra-extra-high) ~480dpi, xxxhdpi (extra-extra-extra-high) ~640dp
+* A set of six generalized densities:
+  * ldpi (low) ~120dpi
+  * mdpi (medium) ~160dpi
+  * hdpi (high) ~240dpi
+  * xhdpi (extra-high) ~320dpi
+  * xxhdpi (extra-extra-high) ~480dpi
+  * xxxhdpi (extra-extra-extra-high) ~640dp
 * Orientation : portrait or landscape
 * Resolution : Total number of pixels on a screen
 * Density Independent Pixel ( dip):A virtual pixel unit that you should use when defining UI layout,to express layout dimensions or position in a density-independent way.WARNING : dip is DIFFERENT from dpi.Careful here :-)
 * Some screen dimensions in dips:xlarge screens are at least 960dp x 720dp,large screens are at least 640dp x 480dp, normal screens are at least 470dp x 320dp, small screens are at least 426dp x 320dp
 * Transform from px to dip :  dp = px * (dpi / 160)
 * For android 3.2 and up ( Specifiers like small, normal, large and xlarge are deprecated.
-* Use [smallestWidth] sw<N>dp (Examples:sw600dp,sw720dp) ,[Available screen width ]	w<N>dp (Examples: w720dp ,w1024dp) , and [Available screen height] 	h<N>dp (Examples: h720dp h1024dp) to target a specific screen size.
-* This example uses a combination of the following layout files and aliases to make our app work on regular phones ,7 inch tablets and 10 inch tablets :res/layout/main.xml, res/layout-land/main.xml,res/layout/main_tablet.xml,res/values-large-land/layout.xml, res/values-sw600dp-land/layout.xml, res/values-xlarge/layout.xml, res/values-sw720dp/layout.xml
+* Use :
+  * [smallestWidth] sw<N>dp (Examples:sw600dp,sw720dp)
+  * [Available screen width ]	w<N>dp (Examples: w720dp ,w1024dp)
+  * [Available screen height] 	h<N>dp (Examples: h720dp h1024dp) to target a specific screen size.
+* This example uses a combination of the following layout files and aliases to make our app work on regular phones ,7 inch tablets and 10 inch tablets :
+  * res/layout/main.xml
+  * res/layout-land/main.xml
+  * res/layout/main_tablet.xml
+  * res/values-large-land/layout.xml
+  * res/values-sw600dp-land/layout.xml
+  * res/values-xlarge/layout.xml
+  * res/values-sw720dp/layout.xml
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/java/com/blikoon/app16/MainActivity.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/layout/activity_main.xml
