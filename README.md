@@ -39,7 +39,7 @@ Source code for Android Recipies Book 5Th Edition
 ####App1.3.2 : Creting Completely custom Views
 				
 * Key overides:
-				
+```			
 	@Override
     protected void onMeasure(int widthMeasureSpec,
                              int heightMeasureSpec) {
@@ -62,6 +62,7 @@ Source code for Android Recipies Book 5Th Edition
 	//Draw your shapes in here
 	
     }
+```
 	
 * Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/MainActivity.java
 				: https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/CustomView.java
@@ -215,7 +216,7 @@ Source code for Android Recipies Book 5Th Edition
 				: https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-w820dp/dimens.xml
 				: https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-xlarge/layout.xml
 				
-####App1.7 : Show text over images in appropriate colors.\
+####App1.7 : Show text over images in appropriate colors.
 
 * android.graphics.Bitmap and android.support.v7.graphics.Palette classes are used.
 * Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.7/app/src/main/java/com/blikoon/app17/MainActivity.java
