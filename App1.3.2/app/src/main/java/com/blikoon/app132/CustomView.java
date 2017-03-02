@@ -30,10 +30,10 @@ public class CustomView extends View {
     public CustomView(Context context, AttributeSet attrs,
                         int defStyle) {
         super(context, attrs, defStyle);
-//Do any initialization of your view in this constructor
-//Create a paintbrush to draw with
+        //Do any initialization of your view in this constructor
+        //Create a paintbrush to draw with
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-//We want to draw our circles filled in
+        //We want to draw our circles filled in
         mPaint.setStyle(Paint.Style.FILL);
 
 
@@ -44,12 +44,12 @@ public class CustomView extends View {
     protected void onMeasure(int widthMeasureSpec,
                              int heightMeasureSpec) {
         int width, height;
-//Determine the ideal size of your content, unconstrained
+        //Determine the ideal size of your content, unconstrained
         int contentWidth = 200;
         int contentHeight = 200;
         width = getMeasurement(widthMeasureSpec, contentWidth);
         height = getMeasurement(heightMeasureSpec, contentHeight);
-//MUST call this method with the measured values!
+        //MUST call this method with the measured values!
         setMeasuredDimension(width, height);
     }
     /*
@@ -72,7 +72,7 @@ public class CustomView extends View {
     protected void onSizeChanged(int w, int h,
                                  int oldw, int oldh) {
         if (w != oldw || h != oldh) {
-//If there was a change, reset the parameters
+    //If there was a change, reset the parameters
             mCenter.x = w / 2;
             mCenter.y = h / 2;
             mRadius = Math.min(mCenter.x, mCenter.y);
@@ -80,8 +80,8 @@ public class CustomView extends View {
     }
     @Override
     protected void onDraw(Canvas canvas) {
-//Draw a series of concentric circles,
-// smallest to largest, alternating colors
+    //Draw a series of concentric circles,
+    // smallest to largest, alternating colors
 
 
         mPaint.setColor(Color.RED);

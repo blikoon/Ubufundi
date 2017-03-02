@@ -1,5 +1,5 @@
 /*
-    ////--->ViewPropertyAnimator
+    ///Animating view properties with ViewPropertyAnimator
     In this example ,we use a ViewPropertyAnimator to animate a view object.
     *Call View.animate() and get a ViewPropertyAnimator object
     * On it, you can call functions to animate properties like alpha ,
