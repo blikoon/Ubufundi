@@ -95,7 +95,7 @@ Source code for Android Recipies Book 5Th Edition
         }
     }
 ```	
-*Relevant files :
+* Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.4.1/app/src/main/java/com/blikoon/app141/MainActivity.java
 
 ####App1.4.2 : Use ObjectAnimator to animate a View
@@ -151,7 +151,7 @@ Source code for Android Recipies Book 5Th Edition
          flipAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {...}
 ```
 		 
-*Relevant files :
+* Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/java/com/blikoon/App143/MainActivity.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/res/animator/flip.xml
 				
@@ -225,13 +225,17 @@ Source code for Android Recipies Book 5Th Edition
 * Orientation : portrait or landscape
 * Resolution : Total number of pixels on a screen
 * Density Independent Pixel ( dip):A virtual pixel unit that you should use when defining UI layout,to express layout dimensions or position in a density-independent way.WARNING : dip is DIFFERENT from dpi.Careful here :-)
-* Some screen dimensions in dips:xlarge screens are at least 960dp x 720dp,large screens are at least 640dp x 480dp, normal screens are at least 470dp x 320dp, small screens are at least 426dp x 320dp
+* Some screen dimensions in dips:
+  * xlarge screens are at least 960dp x 720dp
+  * large screens are at least 640dp x 480dp
+  * normal screens are at least 470dp x 320dp
+  * small screens are at least 426dp x 320dp
 * Transform from px to dip :  dp = px * (dpi / 160)
 * For android 3.2 and up ( Specifiers like small, normal, large and xlarge are deprecated.
 * Use :
-  * [smallestWidth] sw<N>dp (Examples:sw600dp,sw720dp)
-  * [Available screen width ]	w<N>dp (Examples: w720dp ,w1024dp)
-  * [Available screen height] 	h<N>dp (Examples: h720dp h1024dp) to target a specific screen size.
+  * [smallestWidth] sw--dp (Examples:sw600dp,sw720dp)
+  * [Available screen width ]	w--dp (Examples: w720dp ,w1024dp)
+  * [Available screen height] 	h--dp (Examples: h720dp h1024dp) to target a specific screen size.
 * This example uses a combination of the following layout files and aliases to make our app work on regular phones ,7 inch tablets and 10 inch tablets :
   * res/layout/main.xml
   * res/layout-land/main.xml
