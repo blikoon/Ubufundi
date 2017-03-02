@@ -36,7 +36,7 @@ Source code for Android Recipies Book 5Th Edition
                         ActionBar.LayoutParams.WRAP_CONTENT));
 ```
 						
-*Relevant files :
+* Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/java/com/blikoon/app131/MainActivity.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/res/layout/activity_main.xml
 				
@@ -230,7 +230,7 @@ Source code for Android Recipies Book 5Th Edition
   * large screens are at least 640dp x 480dp
   * normal screens are at least 470dp x 320dp
   * small screens are at least 426dp x 320dp
-* Transform from px to dip :  dp = px * (dpi / 160)
+* Transform from px to dip :  __dp = px * (dpi / 160)__
 * For android 3.2 and up ( Specifiers like small, normal, large and xlarge are deprecated.
 * Use :
   * [smallestWidth] sw--dp (Examples:sw600dp,sw720dp)
