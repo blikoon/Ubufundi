@@ -1,7 +1,7 @@
 # Ubufundi
 Source code for Android Recipies Book 5Th Edition
 
-####App1.1 : Working with styles and themes
+##App1.1 : Working with styles and themes
 
 * Define your styles in the /res/values/styles.xml file of your project.
 * Reuse them on UI components as shown in the res/layout/activity_main.xml file(Example style = "@style/FormCheckBox")
@@ -13,7 +13,7 @@ Source code for Android Recipies Book 5Th Edition
   * https://github.com/blikoon/Ubufundi/blob/master/App1.1/app/src/main/res/layout/activity_main.xml
 				
 
-####App1.2 : Show your activity fullscreen when necessary
+##App1.2 : Show your activity fullscreen when necessary
 
 * Sometimes you need to hide the actionbar and other system views so the user focuses on your content.
 * This app shows off different approaches to that.
@@ -22,7 +22,7 @@ Source code for Android Recipies Book 5Th Edition
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.2/app/src/main/java/com/blikoon/app12/MainActivity.java
 
-####App1.3.1 : Create Layouts in XML and add Views at run time(in Java)
+##App1.3.1 : Create Layouts in XML and add Views at run time(in Java)
 
 * Quick Code:
 ```
@@ -40,7 +40,7 @@ Source code for Android Recipies Book 5Th Edition
   * https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/java/com/blikoon/app131/MainActivity.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/res/layout/activity_main.xml
 				
-####App1.3.2 : Creting Completely custom Views
+##App1.3.2 : Creting Completely custom Views
 				
 * Key overides:
 ```			
@@ -75,7 +75,7 @@ Source code for Android Recipies Book 5Th Edition
 				
 				
 				
-####App1.4.1 : Animating Views
+##App1.4.1 : Animating Views
 
 * we use a ViewPropertyAnimator to animate a view object.
 * Call View.animate() and get a ViewPropertyAnimator object
@@ -98,7 +98,7 @@ Source code for Android Recipies Book 5Th Edition
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.4.1/app/src/main/java/com/blikoon/app141/MainActivity.java
 
-####App1.4.2 : Use ObjectAnimator to animate a View
+##App1.4.2 : Use ObjectAnimator to animate a View
 
 * ObjectAnimator is more robust in that it not only animates Views but Also other objects.It also allows you to have updates on the progress of the animation
 * This example gives a basic template you can use as a starting point for more complex animations.
@@ -136,7 +136,7 @@ Source code for Android Recipies Book 5Th Edition
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.4.2/app/src/main/java/com/blikoon/app142/MainActivity.java
 
-####App1.4.3 : Use AnimatorSet to chain animations
+##App1.4.3 : Use AnimatorSet to chain animations
 
 * Chaining animations in Java Code is verbose so we do that in xml
 * Put your animation xml files in the res/animator folder
@@ -156,14 +156,14 @@ Source code for Android Recipies Book 5Th Edition
   * https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/res/animator/flip.xml
 				
 				
-####App1.5.1 : Animate Layout Changes
+##App1.5.1 : Animate Layout Changes
 				
 * Adding the property android:animateLayoutChanges="true" to y our layout view makes its layout changes animated.
 * This is enough if you don't want fancy animations.If you do, look at App 1.5.2
 *Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.5.1/app/src/main/res/layout/activity_main.xml
 
-####App1.5.2 : Custom Layout Animations
+##App1.5.2 : Custom Layout Animations
 
 * API Level 11
 * Using a custom Layout animation
@@ -195,7 +195,7 @@ Source code for Android Recipies Book 5Th Edition
   * https://github.com/blikoon/Ubufundi/blob/master/App1.5.2/app/src/main/java/com/blikoon/app152/MainActivity.java
 
 
-####App1.6 : Target multiple screen sizes with your app
+##App1.6 : Target multiple screen sizes with your app
 
 
 * Detailed info from google : https://developer.android.com/guide/practices/screens_support.html
@@ -255,7 +255,7 @@ Source code for Android Recipies Book 5Th Edition
   * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-w820dp/dimens.xml
   * https://github.com/blikoon/Ubufundi/blob/master/App1.6/app/src/main/res/values-xlarge/layout.xml
 				
-####App1.7 : Show text over images in appropriate colors.
+##App1.7 : Show text over images in appropriate colors.
 
 * android.graphics.Bitmap and android.support.v7.graphics.Palette classes are used.
 * Relevant files :
