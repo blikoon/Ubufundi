@@ -23,15 +23,16 @@ Source code for Android Recipies Book 5Th Edition
 ####App1.3.1 : Create Layouts in XML and add Views at run time(in Java)
 
 * A code snippet is better than a thousand words.Here we are.
-
-		LinearLayout layout = (LinearLayout)getLayoutInflater()
-                .inflate(R.layout.activity_main, null);
-        //Add a new button.Here you can also add complex ui structures
-        Button reset = new Button(this);
-        reset.setText("Reset Form");
-        layout.addView(reset,
+```
+	LinearLayout layout = (LinearLayout)getLayoutInflater()
+           .inflate(R.layout.activity_main, null);
+    //Add a new button.Here you can also add complex ui structures
+    Button reset = new Button(this);
+    reset.setText("Reset Form");
+    layout.addView(reset,
                 new LinearLayout.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT,
                         ActionBar.LayoutParams.WRAP_CONTENT));
+```
 						
 *Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/java/com/blikoon/app131/MainActivity.java
 				: https://github.com/blikoon/Ubufundi/blob/master/App1.3.1/app/src/main/res/layout/activity_main.xml
@@ -76,7 +77,7 @@ Source code for Android Recipies Book 5Th Edition
 * Call View.animate() and get a ViewPropertyAnimator object
 * On it, you can call functions to animate properties like alpha ,translation, rotation...
 * Quick code :
-
+```
 	public void onClick(View v) {
         if (viewToAnimate.getAlpha() > 0f) {
             //If the view is visible, slide it out to the right
@@ -89,7 +90,7 @@ Source code for Android Recipies Book 5Th Edition
             viewToAnimate.animate().alpha(1f);
         }
     }
-	
+```	
 *Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.4.1/app/src/main/java/com/blikoon/app141/MainActivity.java
 
 ####App1.4.2 : Use ObjectAnimator to animate a View
@@ -98,7 +99,7 @@ Source code for Android Recipies Book 5Th Edition
 * This example gives a basic template you can use as a starting point for more complex animations.
 * More in depth details here : https://developer.android.com/guide/topics/graphics/prop-animation.html#property-vs-view
 * Quick Code:
-
+```
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,7 +127,7 @@ Source code for Android Recipies Book 5Th Edition
             }
         });
     }
-	
+```	
 * Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.4.2/app/src/main/java/com/blikoon/app142/MainActivity.java
 
 ####App1.4.3 : Use AnimatorSet to chain animations
@@ -139,8 +140,10 @@ Source code for Android Recipies Book 5Th Edition
          //The animations are probably stored in some kind of container and you
          //retrieve them in the order they are stored in inside the flip.xml
          //animation file.
+```		 
          ObjectAnimator flipAnimator = (ObjectAnimator) mFlipper.getChildAnimations().get(0);
          flipAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {...}
+```
 		 
 *Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/java/com/blikoon/App143/MainActivity.java
 				: https://github.com/blikoon/Ubufundi/blob/master/App1.4.3/app/src/main/res/animator/flip.xml
@@ -173,6 +176,7 @@ Source code for Android Recipies Book 5Th Edition
         In this example APPEARING, DISAPPEARING and CHANGE_DISAPPEARING are used.
 
 * How to use these:
+```
           #Create a LayoutTransition and attach it to a view(Layout)
                 LayoutTransition transition = new LayoutTransition();
                 mContainer.setLayoutTransition(transition);
@@ -183,7 +187,7 @@ Source code for Android Recipies Book 5Th Edition
                 "rotationY", 90f, 0f).setDuration(
                 transition.getDuration(LayoutTransition.APPEARING));
                 transition.setAnimator(LayoutTransition.APPEARING, appearAnim);
-				
+```				
 * Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.5.2/app/src/main/java/com/blikoon/app152/MainActivity.java
 
 
