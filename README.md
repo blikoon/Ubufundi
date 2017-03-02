@@ -38,7 +38,7 @@ Source code for Android Recipies Book 5Th Edition
 				
 ####App1.3.2 : Creting Completely custom Views
 				
-*Key overides:
+* Key overides:
 				
 	@Override
     protected void onMeasure(int widthMeasureSpec,
@@ -63,7 +63,7 @@ Source code for Android Recipies Book 5Th Edition
 	
     }
 	
-*Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/MainActivity.java
+* Relevant files : https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/MainActivity.java
 				: https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/java/com/blikoon/app132/CustomView.java
 			    : https://github.com/blikoon/Ubufundi/blob/master/App1.3.2/app/src/main/res/layout/activity_main.xml
 				
@@ -75,6 +75,7 @@ Source code for Android Recipies Book 5Th Edition
 * Call View.animate() and get a ViewPropertyAnimator object
 * On it, you can call functions to animate properties like alpha ,translation, rotation...
 * Quick code :
+
 	public void onClick(View v) {
         if (viewToAnimate.getAlpha() > 0f) {
             //If the view is visible, slide it out to the right
