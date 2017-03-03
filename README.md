@@ -451,4 +451,57 @@ Source code for Android Recipies Book 5Th Edition
 * You can add in more customized headers and item layouts, this example is just making a point.
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.11/app/src/main/java/com/blikoon/app111/SectionsAdapter.java
-   
+ 
+
+##App1.11 :Create compound Views(Widgets) from standard views
+
+* Quick Code:
+```java
+public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
+        //Initialize the parent layout with the system's button style
+        // This sets the clickable attributes and button background to match
+        // the current theme.
+        super(context, attrs, android.R.attr.buttonStyle);
+        imageView = new ImageView(context, attrs, defaultStyle);
+        textView = new TextView(context, attrs, defaultStyle);
+        //create layout parameters
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT,
+                Gravity.CENTER);
+        //Add the views
+        this.addView(imageView, params);
+        this.addView(textView, params);
+
+        //If image is present, switch to image mode
+        if (imageView.getDrawable() != null) {
+            textView.setVisibility(View.GONE);
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            textView.setVisibility(View.VISIBLE);
+            imageView.setVisibility(View.GONE);
+        }
+
+    }
+```
+* Create a custom class and extend the layout that matches best your goal
+* Create chained Constructors as shown below:
+```java
+         public TextImageButton(Context context) {
+             this(context, null);
+          }
+
+          public TextImageButton(Context context, AttributeSet attrs) {
+              this(context, attrs, 0);
+          }
+
+           public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {...}
+```
+* The first constructor is used when the view is  created in java code , the rest are used when your view is created in xml.Notice that we pass around the attributes down to the third constructor which does the actual work.If you don't provide these constructors for your view ,it won't work both in code and xml.
+* Initialize the parent class of with one of the system styles
+```java
+          super(context, attrs, android.R.attr.buttonStyle);
+```		  
+* This allows your view to fit in the general look of the current theme.
+* Implement whatever logic you're after in your custom compound view 
+* Relevant files :
