@@ -362,12 +362,59 @@ Source code for Android Recipies Book 5Th Edition
   
   
 ##App1.10 :Show images in ListViews using CardView and RecyclerView
-   
+
+* Quick Code:
+```java
+@Override
+    public void onBindViewHolder(final CardViewHolder holder, int position) {
+        String title = context.getString(R.string.title_text);
+        holder.titleView.setText(title);
+        holder.descriptionView.setText(R.string.ipsum_lorem);
+        if (selectedPosition == position) {
+            holder.descriptionView.setVisibility(View.VISIBLE);
+        } else {
+            holder.descriptionView.setVisibility(View.GONE);
+        }
+        holder.imageView.setImageResource(R.drawable.photo);
+        Palette.from(bitmap)
+                .generate(new Palette.PaletteAsyncListener() {
+                    @Override
+                    public void onGenerated(Palette palette) {
+                        Palette.Swatch swatch = palette.getDarkVibrantSwatch();
+                        if (swatch == null) {
+                            swatch = palette.getSwatches().get(0);
+                        }
+                        int titleTextColor = Color.WHITE;
+                        if (swatch != null) {
+                            titleTextColor = swatch.getTitleTextColor();
+                            titleTextColor = ColorUtils.setAlphaComponent(titleTextColor, 255);
+                        }
+                        holder.titleView.setTextColor(titleTextColor);
+                    }
+                });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                if (selectedPosition == position) {
+                    selectedPosition = -1;
+                    notifyItemChanged(position);
+                } else {
+                    int oldSelectedPosition = selectedPosition;
+                    selectedPosition = position;
+                    notifyItemChanged(oldSelectedPosition);
+                    notifyItemChanged(selectedPosition);
+                }
+            }
+        });
+    }
+```   
 * Use android.support.v7.widget.CardView and android.support.percent.PercentRelativeLayout to wrap around the layout used by your ViewHolder subclass
 * CardView gives you those nice Material rectangles you can stuff your viewItem in
 * PercentRelativeLayout allows easy resizing of items for 1:1 or 16:9 ration required by Material design
 * Only show item image and title when user is scrolling and display detailed description when the item is explicitly tapped and becomes the "current item".This is taken care of in the onBindViewHolder override.
 * The color of the overlayed image on top of the image is taken care of the same way we did in https://github.com/blikoon/Ubufundi#app17--show-text-over-images-in-appropriate-colors
-*Relevant files :
-  * 
+* Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.10/app/src/main/java/com/blikoon/app110/CardViewAdapter.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.10/app/src/main/res/layout/cardview_item.xml
  
