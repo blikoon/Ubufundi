@@ -417,4 +417,37 @@ Source code for Android Recipies Book 5Th Edition
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.10/app/src/main/java/com/blikoon/app110/CardViewAdapter.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.10/app/src/main/res/layout/cardview_item.xml
- 
+
+##App1.10 :Show Section Headers in RecyclerView
+
+* Quick Code :
+```java
+@Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        int steps = 0;
+        for (int i = 0; i < sections.size(); i++) {
+            Pair<String, String[]> section = sections.get(i);
+            if(steps == position) {
+                ((HeaderHolder) holder).getView().setText(section.first);
+                return;
+            }
+            steps++;
+
+            for (int j = 0; j < section.second.length; j++) {
+                if(steps == position) {
+                    ((ItemHolder) holder).getView().setText(section.second[j]);
+                    return;
+                }
+                steps++;
+            }
+        }
+    }
+```
+
+* Use the  getItemViewType(int position) override to specify different view types
+* Use differently styled ViewHolders in the onBindViewHolder override
+* In this example ,we have a header viewType and an item viewType
+* The layout for the header viewtype ViewHolder is styled with a blueish background to highlight it
+* You can add in more customized headers and item layouts, this example is just making a point.
+* Relevant files :
+   
