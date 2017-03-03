@@ -418,7 +418,7 @@ Source code for Android Recipies Book 5Th Edition
   * https://github.com/blikoon/Ubufundi/blob/master/App1.10/app/src/main/java/com/blikoon/app110/CardViewAdapter.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.10/app/src/main/res/layout/cardview_item.xml
 
-##App1.10 :Show Section Headers in RecyclerView
+##App1.11 :Show Section Headers in RecyclerView
 
 * Quick Code :
 ```java
@@ -450,4 +450,5 @@ Source code for Android Recipies Book 5Th Edition
 * The layout for the header viewtype ViewHolder is styled with a blueish background to highlight it
 * You can add in more customized headers and item layouts, this example is just making a point.
 * Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.11/app/src/main/java/com/blikoon/app111/SectionsAdapter.java
    
