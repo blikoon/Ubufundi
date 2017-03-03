@@ -359,3 +359,15 @@ Source code for Android Recipies Book 5Th Edition
 * NOTE : There is not actual data in the adapter of this example.In onBindViewHolder, we are simply tricking the view into thinking it has more items to display using notifyItemRangeInserted(0, 10)
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.9/app/src/main/java/com/blikoon/app19/EmptyStateAdapter.java
+  
+  
+##App1.10 :Show images in ListViews using CardView and RecyclerView
+   
+* Use android.support.v7.widget.CardView and android.support.percent.PercentRelativeLayout to wrap around the layout used by your ViewHolder subclass
+* CardView gives you those nice Material rectangles you can stuff your viewItem in
+* PercentRelativeLayout allows easy resizing of items for 1:1 or 16:9 ration required by Material design
+* Only show item image and title when user is scrolling and display detailed description when the item is explicitly tapped and becomes the "current item".This is taken care of in the onBindViewHolder override.
+* The color of the overlayed image on top of the image is taken care of the same way we did in https://github.com/blikoon/Ubufundi#app17--show-text-over-images-in-appropriate-colors
+*Relevant files :
+  * 
+ 
