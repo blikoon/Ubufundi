@@ -301,6 +301,10 @@ Source code for Android Recipies Book 5Th Edition
   * onCreateViewHolder() : Loads the layout file that embodies the looks of a single item in the list
   * onBindViewHolder () : Stuffs the data in the item from the data set in the adapter
   * getItemCount () : used to report the number of items to the RecyclerView
+
+* Notify the view of changes in data by calls to:
+  * notifyItemInserted(position)
+  * notifyItemRemoved(position)
 * Add a subclass of RecyclerView.ViewHolder that implements the logic to manipulate single viewItems
 * Control the item span count on each row/column in GridLayoutManager using GridStaggerLookup
 * Control the spacing between items using RecyclerView.ItemDecoration
@@ -311,3 +315,47 @@ Source code for Android Recipies Book 5Th Edition
   * https://github.com/blikoon/Ubufundi/blob/master/App1.8.1/app/src/main/java/com/blikoon/app181/GridStaggerLookup.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.8.1/app/src/main/java/com/blikoon/app181/InsetDecoration.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.8.1/app/src/main/java/com/blikoon/app181/ConnectorDecoration.java
+
+  
+##App1.9 : Notify user of empty data sets(still RecyclerView)
+
+* Quick Code:
+```java
+@Override
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
+        switch (holder.getItemViewType()) {
+            case SIMPLE_ITEM:
+                holder.textView.setText("Item nr " + (position + 1) + ". Tap to remove.");
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int itemPosition = holder.getAdapterPosition();
+                        itemCount--;
+                        notifyItemRemoved(itemPosition);
+                        if(itemCount == 0) {
+                            notifyItemInserted(0);
+                        }
+                    }
+                });
+                break;
+            case EMPTY_ITEM:
+                holder.refreshButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        notifyItemRemoved(0);
+                        itemCount = 10;
+                        notifyItemRangeInserted(0, 10);
+                    }
+                });
+                break;
+        }
+    }
+```
+
+
+* Show a visual representation that the data set is empty
+* Show some kind or refresh button to load data into the view
+* Override getItemViewType(int position) to let the adapter know which kind of view it is dealing with.
+* NOTE : There is not actual data in the adapter of this example.In onBindViewHolder, we are simply tricking the view into thinking it has more items to display using notifyItemRangeInserted(0, 10)
+* Relevant files :
+  * 
