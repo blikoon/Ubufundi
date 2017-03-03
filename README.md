@@ -160,7 +160,7 @@ Source code for Android Recipies Book 5Th Edition
 				
 * Adding the property android:animateLayoutChanges="true" to y our layout view makes its layout changes animated.
 * This is enough if you don't want fancy animations.If you do, look at App 1.5.2
-*Relevant files :
+* Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.5.1/app/src/main/res/layout/activity_main.xml
 
 ##App1.5.2 : Custom Layout Animations
@@ -169,7 +169,7 @@ Source code for Android Recipies Book 5Th Edition
 * Using a custom Layout animation
 * Use these to apply custom animations to layout changes
 * There are five states of layout changes for which you can
-*apply a custom animation on different states:
+* apply a custom animation on different states:
   * APPEARING: An item that is appearing in the container
   * DISAPPEARING: An item that is disappearing from the container
   * CHANGING: An item that is changing because of a layout change, such as a resize, that doesn’t involve views being added or removed
@@ -260,3 +260,21 @@ Source code for Android Recipies Book 5Th Edition
 * android.graphics.Bitmap and android.support.v7.graphics.Palette classes are used.
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.7/app/src/main/java/com/blikoon/app17/MainActivity.java
+  
+##App1.7 : Use RecyclerViews to show subViews in Lists.
+
+* Decide how your  items are laid out using LayoutManagers
+* Supported LayoutManagers:
+  * LinearLayoutManagers
+  * GridLayoutManagers
+*   Interface between the View and actual data using adapters
+*   Adapters have to extend RecyclerView.Adapter
+*   Adapters have to implement three key methods:
+  * onCreateViewHolder() : Loads the layout file that embodies the looks of a single item in the list
+  * onBindViewHolder () : Stuffs the data in the item from the data set in the adapter
+  * getItemCount () : used to report the number of items to the RecyclerView
+* Add a subclass of RecyclerView.ViewHolder that implements the logic to manipulate single viewItems
+* Control the item span count on each row/column in GridLayoutManager using GridStaggerLookup
+* Control the spacing between items using RecyclerView.ItemDecoration
+* ItemDecoration can be customized even more to add stunning drawn effects( Look at ConnectorDecoration)
+* Relevant files :
