@@ -358,4 +358,4 @@ Source code for Android Recipies Book 5Th Edition
 * Override getItemViewType(int position) to let the adapter know which kind of view it is dealing with.
 * NOTE : There is not actual data in the adapter of this example.In onBindViewHolder, we are simply tricking the view into thinking it has more items to display using notifyItemRangeInserted(0, 10)
 * Relevant files :
-  * 
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.9/app/src/main/java/com/blikoon/app19/EmptyStateAdapter.java
