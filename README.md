@@ -453,7 +453,7 @@ Source code for Android Recipies Book 5Th Edition
   * https://github.com/blikoon/Ubufundi/blob/master/App1.11/app/src/main/java/com/blikoon/app111/SectionsAdapter.java
  
 
-##App1.11 :Create compound Views(Widgets) from standard views
+##App1.12 :Create compound Views(Widgets) from standard views
 
 * Quick Code:
 ```java
@@ -505,3 +505,4 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * This allows your view to fit in the general look of the current theme.
 * Implement whatever logic you're after in your custom compound view 
 * Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.12/app/src/main/java/com/blikoon/app112/TextImageButton.java
