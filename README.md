@@ -263,6 +263,34 @@ Source code for Android Recipies Book 5Th Edition
   
 ##App1.7 : Use RecyclerViews to show subViews in Lists.
 
+* Quick Code:
+```java
+ mRecyclerView = new RecyclerView(this);
+        mHorizontalManager = new LinearLayoutManager(this,
+                LinearLayoutManager.HORIZONTAL, false);
+        mVerticalManager = new LinearLayoutManager(this,
+                LinearLayoutManager.VERTICAL, false);
+        mVerticalGridManager = new GridLayoutManager(this,
+                2, /* Number of grid columns */
+                LinearLayoutManager.VERTICAL, /* Orient grid vertically */
+                false);
+        mHorizontalGridManager = new GridLayoutManager(this,
+                3, /* Number of grid rows */
+                LinearLayoutManager.HORIZONTAL, /* Orient grid horizontally */
+                false);
+        //Connector line decorations for vertical grid
+        mConnectors = new ConnectorDecoration(this);
+        //Stagger the vertical grid
+        mVerticalGridManager.setSpanSizeLookup(new GridStaggerLookup());
+        mAdapter = new SimpleItemAdapter(this);
+        mAdapter.setOnItemClickListener(this);
+        mRecyclerView.setAdapter(mAdapter);
+        //Apply margins decoration to all collections
+        mRecyclerView.addItemDecoration(new InsetDecoration(this));
+        //Default to vertical layout
+        selectLayoutManager(R.id.action_vertical);
+        setContentView(mRecyclerView);
+```
 * Decide how your  items are laid out using LayoutManagers
 * Supported LayoutManagers:
   * LinearLayoutManagers
@@ -278,3 +306,8 @@ Source code for Android Recipies Book 5Th Edition
 * Control the spacing between items using RecyclerView.ItemDecoration
 * ItemDecoration can be customized even more to add stunning drawn effects( Look at ConnectorDecoration)
 * Relevant files :
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.8.1/app/src/main/java/com/blikoon/app181/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.8.1/app/src/main/java/com/blikoon/app181/SimpleItemAdapter.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.8.1/app/src/main/java/com/blikoon/app181/GridStaggerLookup.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.8.1/app/src/main/java/com/blikoon/app181/InsetDecoration.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.8.1/app/src/main/java/com/blikoon/app181/ConnectorDecoration.java
