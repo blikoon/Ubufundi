@@ -261,7 +261,7 @@ Source code for Android Recipies Book 5Th Edition
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.7/app/src/main/java/com/blikoon/app17/MainActivity.java
   
-##App1.7 : Use RecyclerViews to show subViews in Lists.
+##App1.8.1 : Use RecyclerViews to show subViews in Lists.
 
 * Quick Code:
 ```java
