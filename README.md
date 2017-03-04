@@ -737,7 +737,7 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
   * https://github.com/blikoon/Ubufundi/blob/master/App1.13.5/app/src/main/java/com/blikoon/app1135/MainActivity.java  
 
   
-##App1.13.5 : Animate fragment transactions in entire application.  
+##App1.13.6 : Animate fragment transactions in entire application.  
 
 *You do this at the theme level ( res/values/styles.xml):
 ```xml	
@@ -806,4 +806,4 @@ parent="@android:style/Animation.Activity">
 </resources>
 ```
 * Relevant files : 
-  * One    
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.6/app/src/main/res/values/styles.xml   
