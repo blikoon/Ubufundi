@@ -530,11 +530,9 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * Animations are defined in resources : res/anim/
 * Animations can also be applied per application.This is done at the theme level.App1.13.1 shows that.
 * Relevant files :
-  * one 
-  * two
-  * three
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13/app/src/main/java/com/blikoon/app113/MainActivity.java 
 
-
+  
 ##App1.13.1 :Animate activity for entire application
 
 * Quick Code:
@@ -576,15 +574,16 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * The ActivityAnimation style contains the animations we defined
 * With the theme applied in the manifest ,now every activity transition should be animated.  
 * Relevant files:
-  * One
-  * Two
-  * Three
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.1/app/src/main/res/values/styles.xml
+
   
 ##App1.13.2 :Animate Fragment transitions with custom animations
 
 
 * This example works for fragments from the android support library(v4)
+* The details of fragments are explained here : http://www.blikoon.com/tutorials/android-working-with-fragments
 * Use it by setting a custom animation to the FragmentTransaction object as shown
+
 ```java 
      FragmentTransaction transaction =
                 getSupportFragmentManager().beginTransaction();
@@ -603,9 +602,8 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * We can also handle the fragment animation logic inside the fragment class itself so all transitions of its instances are animated. App1.13.3 does just that.
 * !!!!!setCustomAnimations() must be called before add(), replace(), or any other action method, or the animation will not run. It is good practice to simply call this method first in the transaction block.
 * Relevant files:
-  * One
-  * Two
-  * Three 
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.2/app/src/main/java/com/blikoon/app1132/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.2/app/src/main/java/com/blikoon/app1132/Fragment2.java
   
   
 ##App1.13.3 : Bundle the fragment transition animation into the fragment class
@@ -640,8 +638,8 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * Bundle your animation logic inside the onCreateAnimation() override.
 * WARNING : The animations we see here only work with the support library version of fragments.Note that our imports are android.support.v4.app.Fragment;
 * Relevant files:
-  * One
-  * Two 
-  * Three
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.3/app/src/main/java/com/blikoon/app1133/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.3/app/src/main/java/com/blikoon/app1133/SupportFragment.java
+
  
  
