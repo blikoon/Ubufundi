@@ -873,4 +873,4 @@ com.blikoon.app1141 W/View: PerspectiveScrollContentView not displayed because i
 ```
 * It is complaining that the view is somehow to large.
 * Recent files :
-  *  
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.14.1/app/src/main/java/com/blikoon/app1141/MainActivity.java 
