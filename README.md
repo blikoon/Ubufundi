@@ -840,7 +840,7 @@ private void init() {
         }
         return true;
     }
-```java
+```
 
 * It is possible to add transformations such as rotation, scale and alpha to ViewGroups without resorting to animations.
 * This is also very convenient in applying transformations from the context of a parent view such as scale or color that changes with position
@@ -848,13 +848,13 @@ private void init() {
 ```java
   setStaticTranformationsEnabled(true)
 ```
-  during the initialization of the ViewGroup class.(Usually in the constructor)
+during the initialization of the ViewGroup class.(Usually in the constructor)
     
 * Then implement the
 ```java    
           getChildStaticTransformation(View child,Transformation t)
 ```         
-         override method and in there apply your transformations.
+override method and in there apply your transformations.
 * You have to return true from this method. This way, the system knows it should apply your transformations to the particular child view.
 * Relevant files :
   * One
