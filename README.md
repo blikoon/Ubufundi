@@ -856,6 +856,21 @@ during the initialization of the ViewGroup class.(Usually in the constructor)
 ```         
 override method and in there apply your transformations.
 * You have to return true from this method. This way, the system knows it should apply your transformations to the particular child view.
+* visual effects such as rotation or scale are actually applied to the Matrix of the Transformation
+* We call getMatrix().setScale() and passing in the scale factor and the pivot point
+* The pivot point is the location about which the scale will take place
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.14.0/app/src/main/java/com/blikoon/app1140/PerspectiveLayout.java
-   
+
+
+##App1.14.1 : A more advanced example of transforming child view of ViewGroups.
+
+* !!!THIS EXAMPLE IS NOT WORKING AT THE MOMENT. INVESTIGATING...
+* Currently not working and nothing is shown when you run the app
+* Logcat output :
+```java
+com.blikoon.app1141 W/View: PerspectiveScrollContentView not displayed because it is too large to fit into a software layer (or drawing cache), needs 11796480 bytes, only 8294400 available
+```
+* It is complaining that the view is somehow to large.
+* Recent files :
+  *  
