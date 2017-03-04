@@ -506,3 +506,142 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * Implement whatever logic you're after in your custom compound view 
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.12/app/src/main/java/com/blikoon/app112/TextImageButton.java
+  
+  
+##App1.13 :Animate activity transitions per Activity basis
+  
+* Quick Code:
+```java  
+  @Override
+    public void onClick(View v) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.activity_open_enter, R.anim.activity_open_exit);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_close_enter, R.anim.activity_close_exit);
+    }
+```
+* Animate activity transitions per activity basis
+* Call overridePendingTransition right after you call startActivity() or finish() and the animations you pass in the arguments are applied
+* Animations are defined in resources : res/anim/
+* Animations can also be applied per application.This is done at the theme level.App1.13.1 shows that.
+* Relevant files :
+  * one 
+  * two
+  * three
+
+
+##App1.13.1 :Animate activity for entire application
+
+* Quick Code:
+```xml
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">
+            @style/ActivityAnimation</item>
+    </style>
+
+    <style name="ActivityAnimation"
+        parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">
+            @anim/activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">
+            @anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">
+            @anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">
+            @anim/activity_close_exit</item>
+    </style>
+
+</resources>
+```
+
+* Animations are defined in res/anim
+* Add the item:
+```xml
+   <item name="android:windowAnimationStyle">
+            @style/ActivityAnimation</item>
+```			
+       to your theme
+* The ActivityAnimation style contains the animations we defined
+* With the theme applied in the manifest ,now every activity transition should be animated.  
+* Relevant files:
+  * One
+  * Two
+  * Three
+  
+##App1.13.2 :Animate Fragment transitions with custom animations
+
+
+* This example works for fragments from the android support library(v4)
+* Use it by setting a custom animation to the FragmentTransaction object as shown
+```java 
+     FragmentTransaction transaction =
+                getSupportFragmentManager().beginTransaction();
+
+        //Add the animation
+        transaction.setCustomAnimations(R.anim.activity_open_enter,
+                R.anim.activity_open_exit);
+
+        //end of animation
+
+        transaction
+                .replace(R.id.fragment_container, fragment2);
+        transaction.commit();
+```
+* Tried passing the four open and close animations at once in onFragment1Message but the system just ignored.Had to explicitly set the close animations in fragment2
+* We can also handle the fragment animation logic inside the fragment class itself so all transitions of its instances are animated. App1.13.3 does just that.
+* !!!!!setCustomAnimations() must be called before add(), replace(), or any other action method, or the animation will not run. It is good practice to simply call this method first in the transaction block.
+* Relevant files:
+  * One
+  * Two
+  * Three 
+  
+  
+##App1.13.3 : Bundle the fragment transition animation into the fragment class
+
+* Quick Code:
+```java 
+@Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        switch (transit) {
+            case FragmentTransaction.TRANSIT_FRAGMENT_FADE:
+                if (enter) {
+                    return AnimationUtils.loadAnimation(getActivity(), android.R.anim.fade_in);
+                } else {
+                    return AnimationUtils.loadAnimation(getActivity(), android.R.anim.fade_out);
+                }
+            case FragmentTransaction.TRANSIT_FRAGMENT_CLOSE:
+                if (enter) {
+                    return AnimationUtils.loadAnimation(getActivity(), R.anim.activity_close_enter);
+                } else {
+                    return AnimationUtils.loadAnimation(getActivity(), R.anim.activity_close_exit);
+                }
+            case FragmentTransaction.TRANSIT_FRAGMENT_OPEN:
+            default:
+                if (enter) {
+                    return AnimationUtils.loadAnimation(getActivity(), R.anim.activity_open_enter);
+                } else {
+                    return AnimationUtils.loadAnimation(getActivity(), R.anim.activity_open_exit);
+                }
+        }
+    }
+```
+* Bundle your animation logic inside the onCreateAnimation() override.
+* WARNING : The animations we see here only work with the support library version of fragments.Note that our imports are android.support.v4.app.Fragment;
+* Relevant files:
+  * One
+  * Two 
+  * Three
+ 
+ 
