@@ -733,4 +733,5 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
                             R.animator.fragment_exit);
 ```							
 * Relevant files :
-  * 							
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.5/app/src/main/java/com/blikoon/app1135/NativeFragment.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.5/app/src/main/java/com/blikoon/app1135/MainActivity.java  
