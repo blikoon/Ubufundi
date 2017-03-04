@@ -680,4 +680,57 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * Relevant files:
   * https://github.com/blikoon/Ubufundi/blob/master/App1.13.4/app/src/main/java/com/blikoon/app1134/MainActivity.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.13.4/app/src/main/res/animator/fragment_enter.xml  
- 
+
+
+
+##App1.13.5 : Implement the Animation logic inside a native fragment subclass.
+
+* Quick code :
+```java
+@Override
+    public Animator onCreateAnimator(int transit, boolean enter,
+                                     int nextAnim) {
+        switch (transit) {
+            case FragmentTransaction.TRANSIT_FRAGMENT_FADE:
+                if (enter) {
+                    return AnimatorInflater.loadAnimator(
+                            getActivity(),
+                            android.R.animator.fade_in);
+                } else {
+                    return AnimatorInflater.loadAnimator(
+                            getActivity(),
+                            android.R.animator.fade_out);
+                }
+            case FragmentTransaction.TRANSIT_FRAGMENT_CLOSE:
+                if (enter) {
+                    return AnimatorInflater.loadAnimator(
+                            getActivity(),
+                            R.animator.fragment_pop_enter);
+                } else {
+                    return AnimatorInflater.loadAnimator(
+                            getActivity(),
+                            R.animator.fragment_pop_exit);
+                }
+            case FragmentTransaction.TRANSIT_FRAGMENT_OPEN:
+            default:
+                if (enter) {
+                    return AnimatorInflater.loadAnimator(
+                            getActivity(),
+                            R.animator.fragment_enter);
+                } else {
+                    return AnimatorInflater.loadAnimator(
+                            getActivity(),
+                            R.animator.fragment_exit);
+                }
+        }
+    }
+```
+* Just like App1.13.4 , the animations are in /res/animator and wrapped in ObjectAnimator objects
+* The animations are applied by loading them like this :
+```java
+                return AnimatorInflater.loadAnimator(
+                            getActivity(),
+                            R.animator.fragment_exit);
+```							
+* Relevant files :
+  * 							
