@@ -739,7 +739,7 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
   
 ##App1.13.6 : Animate fragment transactions in entire application.  
 
-*You do this at the theme level ( res/values/styles.xml):
+* You do this at the theme level ( res/values/styles.xml):
 ```xml	
 	<resources>
 
@@ -806,4 +806,56 @@ parent="@android:style/Animation.Activity">
 </resources>
 ```
 * Relevant files : 
-  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.6/app/src/main/res/values/styles.xml   
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.6/app/src/main/res/values/styles.xml 
+
+
+
+
+##App1.14.0 : Apply visual Transformations to child views of ViewGroup.
+
+* Quick Code :
+```java
+private void init() {
+    // Enable static transformations so each child will
+    // have getChildStaticTransformation() called.
+        setStaticTransformationsEnabled(true);
+    }
+    @Override
+    protected boolean getChildStaticTransformation(View child,
+                                                   Transformation t) {
+        // Clear any existing transformation
+        t.clear();
+        if (getOrientation() == HORIZONTAL) {
+        // Scale children based on distance from left edge
+            float delta = 1.0f - ((float) child.getLeft() / getWidth());
+            t.getMatrix().setScale(delta, delta, child.getWidth() / 2,
+                    child.getHeight() / 2);
+        } else {
+            // Scale children based on distance from top edge
+            float delta = 1.0f - ((float) child.getTop() / getHeight());
+            t.getMatrix().setScale(delta, delta, child.getWidth() / 2,
+                    child.getHeight() / 2);
+            //Also apply a fade effect based on its location
+            t.setAlpha(delta);
+        }
+        return true;
+    }
+```java
+
+* It is possible to add transformations such as rotation, scale and alpha to ViewGroups without resorting to animations.
+* This is also very convenient in applying transformations from the context of a parent view such as scale or color that changes with position
+* The first step in enabling these transformations is calling
+```java
+  setStaticTranformationsEnabled(true)
+```
+  during the initialization of the ViewGroup class.(Usually in the constructor)
+    
+* Then implement the
+```java    
+          getChildStaticTransformation(View child,Transformation t)
+```         
+         override method and in there apply your transformations.
+* You have to return true from this method. This way, the system knows it should apply your transformations to the particular child view.
+* Relevant files :
+  * One
+   
