@@ -678,5 +678,6 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
             ft.commit(); 
 ```			
 * Relevant files:
-  * One			
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.4/app/src/main/java/com/blikoon/app1134/MainActivity.java
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.4/app/src/main/res/animator/fragment_enter.xml  
  
