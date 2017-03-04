@@ -643,3 +643,40 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 
  
  
+##App1.13.4 : Animate Native Fragments transitions( Not fragments from support libs) 
+
+* Use these if you are not using the support libs and are targeting API11 and up
+* IMPORTANT : We are using Native fragments : android.app.Fragment;
+* The general flow is the same with minor changes to what is done in support fragments
+* Animations now live inside objectAnimator objects
+```xml
+    <set xmlns:android="http://schemas.android.com/apk/res/android" >
+    <objectAnimator
+        android:valueFrom="90" android:valueTo="0"
+        android:valueType="floatType"
+        android:propertyName="rotation"
+        android:duration="500"/>
+    <objectAnimator
+        android:valueFrom="0.0" android:valueTo="1.0"
+        android:valueType="floatType"
+        android:propertyName="alpha"
+        android:duration="500"/>
+    </set>
+```
+* We stuff the fragment inside its container as follows:
+```java
+           Fragment1 fragment =  new Fragment1();
+
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            //Must be called first!
+            ft.setCustomAnimations(R.animator.fragment_enter,
+                    R.animator.fragment_exit,
+                    R.animator.fragment_pop_enter,
+                    R.animator.fragment_pop_exit);
+            ft.add(R.id.fragment_container, fragment);
+            ft.addToBackStack(null);
+            ft.commit(); 
+```			
+* Relevant files:
+  * One			
+ 
