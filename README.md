@@ -530,7 +530,7 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * Animations are defined in resources : res/anim/
 * Animations can also be applied per application.This is done at the theme level.App1.13.1 shows that.
 * Relevant files :
-  * https://github.com/blikoon/Ubufundi/blob/master/App1.13/app/src/main/java/com/blikoon/app113/MainActivity.java 
+  * https://github.com/blikoon/Ubufundi/blob/master/App1.13.0/app/src/main/java/com/blikoon/app113/MainActivity.java 
 
   
 ##App1.13.1 :Animate activity for entire application
