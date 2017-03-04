@@ -508,7 +508,7 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
   * https://github.com/blikoon/Ubufundi/blob/master/App1.12/app/src/main/java/com/blikoon/app112/TextImageButton.java
   
   
-##App1.13 :Animate activity transitions per Activity basis
+##App1.13.0 :Animate activity transitions per Activity basis
   
 * Quick Code:
 ```java  
