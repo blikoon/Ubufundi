@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">
+            @style/FragmentAnimation</item>
+    </style>
+
+    <style name="FragmentAnimation"
+        parent="@android:style/Animation.Activity">
+    <item name="android:fragmentOpenEnterAnimation">
+        @animator/fragment_enter</item>
+    <item name="android:fragmentOpenExitAnimation">
+        @animator/fragment_exit</item>
+    <item name="android:fragmentCloseEnterAnimation">
+        @animator/fragment_pop_enter</item>
+    <item name="android:fragmentCloseExitAnimation">
+        @animator/fragment_pop_exit</item>
+    <item name="android:fragmentFadeEnterAnimation">
+        @android:animator/fade_in</item>
+        <item name="android:fragmentFadeExitAnimation">
+            @android:animator/fade_out</item>
+    </style>
+
+</resources>

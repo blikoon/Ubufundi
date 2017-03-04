@@ -735,3 +735,75 @@ public TextImageButton(Context context, AttributeSet attrs, int defaultStyle) {
 * Relevant files :
   * https://github.com/blikoon/Ubufundi/blob/master/App1.13.5/app/src/main/java/com/blikoon/app1135/NativeFragment.java
   * https://github.com/blikoon/Ubufundi/blob/master/App1.13.5/app/src/main/java/com/blikoon/app1135/MainActivity.java  
+
+  
+##App1.13.5 : Animate fragment transactions in entire application.  
+
+*You do this at the theme level ( res/values/styles.xml):
+```xml	
+	<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">
+            @style/FragmentAnimation</item>
+    </style>
+
+    <style name="FragmentAnimation"
+        parent="@android:style/Animation.Activity">
+    <item name="android:fragmentOpenEnterAnimation">
+        @animator/fragment_enter</item>
+    <item name="android:fragmentOpenExitAnimation">
+        @animator/fragment_exit</item>
+    <item name="android:fragmentCloseEnterAnimation">
+        @animator/fragment_pop_enter</item>
+    <item name="android:fragmentCloseExitAnimation">
+        @animator/fragment_pop_exit</item>
+    <item name="android:fragmentFadeEnterAnimation">
+        @android:animator/fade_in</item>
+        <item name="android:fragmentFadeExitAnimation">
+            @android:animator/fade_out</item>
+    </style>
+
+</resources>
+```
+* Use fragments as you do it usually
+* Note : Adding fragment transitions to the theme will work only for the native implementation(android.app.Fragment). The Support Library cannot look for these attributes in a theme because they did not exist in earlier platform versions.
+* If you wanted to customize both the activity and fragment transitions in the theme, you would do it like this :
+```xml
+<resources>
+<style name="AppTheme" parent="android:Theme.Holo.Light">
+<item name="android:windowAnimationStyle">
+@style/TransitionAnimation</item>
+</style>
+<style name="TransitionAnimation"
+parent="@android:style/Animation.Activity">
+<item name="android:activityOpenEnterAnimation">
+@anim/activity_open_enter</item>
+<item name="android:activityOpenExitAnimation">
+@anim/activity_open_exit</item>
+<item name="android:activityCloseEnterAnimation">
+@anim/activity_close_enter</item>
+<item name="android:activityCloseExitAnimation">
+@anim/activity_close_exit</item>
+<item name="android:fragmentOpenEnterAnimation">
+@animator/fragment_enter</item>
+<item name="android:fragmentOpenExitAnimation">
+@animator/fragment_exit</item>
+<item name="android:fragmentCloseEnterAnimation">
+@animator/fragment_pop_enter</item>
+<item name="android:fragmentCloseExitAnimation">
+@animator/fragment_pop_exit</item>
+<item name="android:fragmentFadeEnterAnimation">
+@android:animator/fade_in</item>
+<item name="android:fragmentFadeExitAnimation">
+@android:animator/fade_out</item>
+</style>
+</resources>
+```
+* Relevant files : 
+  * One    
