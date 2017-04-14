@@ -1,7 +1,21 @@
+/*
+    Android provides functions to get the root of the internal storage for a
+    particular app either for writing or reading:
+
+        .FileOutputStream mOutput = Context.openFileOutput(FILENAME, Activity.MODE_PRIVATE);
+        .FileInputStream mInput = Context.openFileInput(FILENAME);
+        .The second parameter can either be MODE_PRIVATE : to override the file if it already is there
+         or MODE_APPEND : to append the new content to the file if it already exists.
+
+    These functions then return an InputStream/OutputStream that you user to write/read your data
+    The rest is normal Java I/O stuff
+
+ */
+
+
 package com.blikoon.app540;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
