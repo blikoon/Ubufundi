@@ -51,6 +51,10 @@
                 be a good location in which to place large content files the application needs
                 that one may not want on internal storage.
 
+        *Also remember proper permissions for external storage:
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
  */
 
 package com.blikoon.app541;
