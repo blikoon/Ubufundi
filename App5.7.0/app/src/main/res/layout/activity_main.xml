@@ -18,5 +18,15 @@
        android:layout_height="wrap_content"
        android:text="Querry"
        />
+   <Button
+       android:id="@+id/backupButton"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Backup"/>
+   <Button
+       android:id="@+id/restoreButton"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Restore"/>
 
 </LinearLayout>
