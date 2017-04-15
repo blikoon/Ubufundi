@@ -1,2 +1,3 @@
 *Document the whole thing using github's wiki
 *Dig more on LoaderManagers and SimpleCursorAdapter used in App 5.9.0
+*Dig more on ContentProviders and best ways to use them.
