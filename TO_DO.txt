@@ -1,0 +1,2 @@
+*Document the whole thing using github's wiki
+*Dig more on LoaderManagers and SimpleCursorAdapter used in App 5.9.0
