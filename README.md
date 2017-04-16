@@ -10,5 +10,4 @@ Head to our Wiki page https://github.com/blikoon/Ubufundi/wiki and see what's in
 Clone this project, add in your project and a small intuitive doc( Something like this : https://github.com/blikoon/Ubufundi/wiki/Interface-between-Java-code-and-javascript-code-in-the-webview) and send me a pull request.
 
 #### Found a bug or something wrong?
-
-
+File a github issue
