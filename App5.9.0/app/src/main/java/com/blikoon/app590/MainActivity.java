@@ -58,9 +58,25 @@ public class MainActivity extends Activity implements
 
         getLoaderManager().initLoader(LOADER_LIST, null, this);
 
-        mAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, null,
+        /*
+        // Creates a new SimpleCursorAdapter
+            mCursorAdapter = new SimpleCursorAdapter(
+            getApplicationContext(),               // The application's Context object
+            R.layout.wordlistrow,                  // A layout in XML for one row in the ListView
+            mCursor,                               // The result from the query
+            mWordListColumns,                      // A string array of column names in the cursor
+            mWordListItems,                        // An integer array of view IDs in the row layout
+            0);                                    // Flags (usually none are needed)
+
+         */
+
+        mAdapter = new SimpleCursorAdapter(
+                this,
+                android.R.layout.simple_list_item_1,
+                null,
                 new String[]{FriendProvider.Columns.FIRST},
-                new int[]{android.R.id.text1}, 0);
+                new int[]{android.R.id.text1},
+                0);
 
         ListView list = new ListView(this);
         list.setOnItemClickListener(this);
