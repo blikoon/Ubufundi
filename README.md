@@ -1,10 +1,8 @@
 ### Ubufundi
-Ever wrote a piece of code to try some concept and then a few monts later need it back and spend valuable time searching for the same info again? Happened to us more than we can count and we put this repo together to help us nail things down fast when I need to.
+A repo containing simple compilable android projects to explain android programming concepts.
 
 ### What's in here?
-It contains simple compilable projects that we put together when learning or experimenting on some android concepts and techonologies and we document relevant parts for fast access.
-
-It also saves loads of time when someone asks you a question and have a quick link to refer them to.
+The repo contains simple compilable projects that we put together when learning or experimenting on some android concepts and techonologies and we document relevant parts for fast access.
 
 ### How do I use this?
 Scroll down or visit the wiki page : https://github.com/blikoon/Ubufundi/wiki to see what content is covered so far. It is helping our team already and if somebody else finds it helpful, even better!
