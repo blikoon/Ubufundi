@@ -82,6 +82,8 @@ Scroll down or visit the wiki page : https://github.com/blikoon/Ubufundi/wiki to
 
 #### [9.Use Retrofit to Handle REST Apis in your android app](https://github.com/blikoon/Ubufundi/wiki/Use-Retrofit-to-Handle-REST-Apis-in-your-android-app)
 
+#### [10.Use Retrofit to handle Rest Apis in your App ( Github apis Retrofit Version)](https://github.com/blikoon/Ubufundi/wiki/Use-Retrofit-to-handle-Rest-Apis-in-your-App-(-Github-apis-Retrofit-Version))
+
 
 ## 5.Persisting Data
 
