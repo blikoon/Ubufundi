@@ -1,14 +1,13 @@
 ### Ubufundi
-Source code for Android Recipies Book 5Th Edition with some custom changes. This repo hosts self contained, compilable pieces of android/Java code to explain some concept. The relevant code is highlighted for fast reference.
+A repo containing simple compilable android projects to explain android programming concepts.
 
-Android is a huge world and it is very easy to forget specific things you did to make things work over time. This repo is my go to place to find quick hints to get the job done. If somebody else finds it useful, even better.
+### What's in here?
+The repo contains simple compilable projects that we put together when learning or experimenting on some android concepts and techonologies and we document relevant parts for fast access.
 
-The book is not complete yet, but I do document things as I go.
-Head to our Wiki page https://github.com/blikoon/Ubufundi/wiki and see what's in store already.
+### How do I use this?
+Scroll down or visit the wiki page : https://github.com/blikoon/Ubufundi/wiki to see what content is covered so far. It is helping our team already and if somebody else finds it helpful, even better!
 
-
-
-### What's in here so far?
+### What have you covered so far?
 
 ## 1.Layouts and Views
 
@@ -112,8 +111,11 @@ Head to our Wiki page https://github.com/blikoon/Ubufundi/wiki and see what's in
 
 
 
-#### Want to make this better?
-Clone this project, add in your project and a small intuitive doc( Something like this : https://github.com/blikoon/Ubufundi/wiki/Interface-between-Java-code-and-javascript-code-in-the-webview) and send me a pull request.
+#### I like this and I want to help make it better?
+Clone this project, add in your project and a small intuitive doc( Something like this : https://github.com/blikoon/Ubufundi/wiki/Interface-between-Java-code-and-javascript-code-in-the-webview) and send us a pull request.
 
 #### Found a bug or something wrong?
 File a github issue
+
+#### Contact
+If you need one of our [Commercial Services](http://www.blikoon.com/services) then do [Contact us](http://www.blikoon.com/contact) otherwise file a github issue or comment on the particular commit relevant to your question and will try to respond in our time.
