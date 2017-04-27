@@ -13,10 +13,13 @@ import cz.msebera.android.httpclient.Header;
 
 
 
+
+
 public class MainActivity extends AppCompatActivity {
     public static final String LOGTAG = "GsonRestApiDemo";
     private Button fetchButton;
     AsyncHttpClient client;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
