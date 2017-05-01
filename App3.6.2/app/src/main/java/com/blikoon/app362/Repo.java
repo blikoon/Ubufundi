@@ -3,10 +3,6 @@ package com.blikoon.app362;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by gakwaya on 4/27/2017.
- */
-
 public class Repo {
 
     @SerializedName("id")
