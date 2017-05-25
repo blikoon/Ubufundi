@@ -120,4 +120,4 @@ Clone this project, add in your project and a small intuitive doc( Something lik
 File a github issue
 
 #### Contact
-If you need one of our [Commercial Services](http://www.blikoon.com/services) then do [Contact us](http://www.blikoon.com/contact) otherwise file a github issue or comment on the particular commit relevant to your question and will try to respond in our time.
+If you need one of our [Commercial Services](http://www.blikoontech.com/services) then do [Contact us](http://www.blikoontech.com/contact) otherwise file a github issue or comment on the particular commit relevant to your question and will try to respond in our time.
